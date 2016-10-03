@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/iammenasco/menasco-journal.svg?branch=master)](https://travis-ci.org/iammenasco/menasco-journal)
+
 # Menasco - An online/macOS Journaling Tool
 
 > My polished app

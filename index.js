@@ -1,5 +1,4 @@
 'use strict';
-const path = require('path');
 const {app, BrowserWindow, crashReporter} = require('electron');
 
 // report crashes to the Electron project
