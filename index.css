@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:700");
+/* color and position of everthing */
+body {
+  font-family: 'Oswald';
+  background-color: #232323;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default; }
+
+.iammenasco {
+  width: 87%;
+  margin: auto; }
+
+.iam {
+  position: relative;
+  left: 3vw;
+  font-size: 10.3vw;
+  line-height: 15.4vw;
+  float: left;
+  -webkit-transform: rotate(-90deg); }
+
+.i {
+  opacity: 0;
+  color: #30ECDF; }
+
+.am {
+  opacity: 0;
+  color: #5A8F90; }
+
+.menasco {
+  opacity: 0;
+  color: #2FE6DD;
+  font-size: 17vw;
+  line-height: 15vw; }
+
+button {
+  opacity: 0;
+  overflow: hidden;
+  color: #5A8F90;
+  border: .2vw solid #5A8F90;
+  background-color: transparent;
+  cursor: pointer;
+  line-height: 5vw;
+  padding: 0 2vw;
+  margin-top: 1vw;
+  border-radius: 1vw;
+  font-size: 3vw;
+  outline: none;
+  transition: transform .125s; }
+
+button:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px); }
+
+/* animation */
+.i-animate {
+  -webkit-animation: kapow .1s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 1.2s;
+  animation: kapow .1s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 1.2s; }
+
+.am-animate {
+  -webkit-animation: kapow .1s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 1.5s;
+  animation: kapow .1s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 1.5s; }
+
+.menasco-animate {
+  -webkit-animation: kapow .1s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 2.1s;
+  animation: kapow .1s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 2.1s; }
+
+.rerun-animate {
+  -webkit-animation: kapow .5s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 3s;
+  animation: kapow .5s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 3s; }
+
+@-webkit-keyframes kapow {
+  100% {
+    opacity: 1; } }
+
+/*# sourceMappingURL=index.map */
