@@ -1,4 +1,4 @@
-# i-am-menasco
+# Menasco - An online/macOS Journaling Tool
 
 > My polished app
 
