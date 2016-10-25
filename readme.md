@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/iammenasco/menasco-journal.svg?branch=master)](https://travis-ci.org/iammenasco/menasco-journal)
 [![Code Climate](https://codeclimate.com/github/iammenasco/menasco-journal/badges/gpa.svg)](https://codeclimate.com/github/iammenasco/menasco-journal)
 [![Known Vulnerabilities](https://snyk.io/test/github/iammenasco/menasco-journal/badge.svg)](https://snyk.io/test/github/iammenasco/menasco-journal)
+[![bitHound Code](https://www.bithound.io/github/iammenasco/menasco-journal/badges/code.svg)](https://www.bithound.io/github/iammenasco/menasco-journal)
 
 
 # Menasco - An online/macOS Journaling Tool
