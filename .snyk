@@ -1,0 +1,30 @@
+version: v1.5.0
+ignore:
+  'npm:connect:20130701':
+    - browser-sync > browser-sync-ui > weinre > express > connect:
+        reason: None given
+        expires: '2016-11-24T16:41:30.203Z'
+  'npm:express:20140912':
+    - browser-sync > browser-sync-ui > weinre > express:
+        reason: None given
+        expires: '2016-11-24T16:41:30.203Z'
+  'npm:qs:20140806':
+    - browser-sync > browser-sync-ui > weinre > express > qs:
+        reason: None given
+        expires: '2016-11-24T16:41:30.203Z'
+  'npm:qs:20140806-1':
+    - browser-sync > browser-sync-ui > weinre > express > qs:
+        reason: None given
+        expires: '2016-11-24T16:41:30.204Z'
+patch:
+  'npm:hawk:20160119':
+    - electron-packager > asar > mksnapshot > request > hawk:
+        patched: '2016-10-25T16:41:30.263Z'
+  'npm:request:20160119':
+    - browser-sync > localtunnel > request:
+        patched: '2016-10-25T16:41:30.263Z'
+    - electron-packager > asar > mksnapshot > request:
+        patched: '2016-10-25T16:41:30.263Z'
+  'npm:tough-cookie:20160722':
+    - browser-sync > localtunnel > request > tough-cookie:
+        patched: '2016-10-25T16:41:30.263Z'
