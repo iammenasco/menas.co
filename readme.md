@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/iammenasco/menasco-journal.png?label=ready&title=Ready)](https://waffle.io/iammenasco/menasco-journal)
 [![Build Status](https://travis-ci.org/iammenasco/menasco-journal.svg?branch=master)](https://travis-ci.org/iammenasco/menasco-journal)
 
 # Menasco - An online/macOS Journaling Tool
