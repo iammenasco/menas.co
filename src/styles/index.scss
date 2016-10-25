@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:700');
-
+@import 'auroral';
 /* color and position of everthing */
 body {
   font-family: 'Oswald';
@@ -7,10 +7,13 @@ body {
   user-select: none;
   -webkit-user-select: none;
   cursor: default;
+  display: block; // if it is not a block element
+  overflow: hidden;
 }
 .iammenasco {
   width: 87%;
   margin: auto;
+  margin-top: 5vw;
 }
 .iam {
   position: relative;
