@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/iammenasco/menasco-journal.svg?branch=master)](https://travis-ci.org/iammenasco/menasco-journal)
+[![Code Climate](https://codeclimate.com/github/iammenasco/menasco-journal/badges/gpa.svg)](https://codeclimate.com/github/iammenasco/menasco-journal)
 
 # Menasco - An online/macOS Journaling Tool
 
