@@ -1,21 +1,22 @@
 {
-  "name": "i-am-menasco",
-  "productName": "Menasco - A Journaling App",
+  "name": "menas.co",
+  "productName": "menas.co - A Journaling App",
   "version": "0.0.1",
   "description": "A Simple Native/Mobile Journaling App",
   "license": "MIT",
-  "repository": "iammenasco/menasco-journal",
+  "repository": "iammenasco/menas.co",
   "author": {
     "name": "Brian Menasco",
     "email": "menasco@me.com",
-    "url": "https://codepen.io/iammenasco"
+    "url": "http://menas.co"
   },
   "engines": {
     "node": ">=4"
   },
   "electronVersion": "0.34.0",
   "scripts": {
-    "test": "xo",
+    "test": "xo; babel-node ./node_modules/istanbul/lib/cli.js --include-all-sources cover ./node_modules/.bin/_mocha -- ./src/**/*.test.js -R spec --recursive",
+    "update": "ncu --upgradeAll",
     "build": "export NODE_ENV='production'; electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --version=$npm_package_electronVersion",
     "build-sass": "node-sass --include-path src/styles --source-map index.map src/styles/index.scss index.css",
     "watch-sass": "nodemon -e scss -x \"npm run build-sass\"",
@@ -33,27 +34,31 @@
   ],
   "dependencies": {
     "babel-core": "^6.18.0",
-    "babel-loader": "^6.2.6",
+    "babel-loader": "^6.2.7",
     "browser-sync": "^2.17.5",
     "browser-sync-webpack-plugin": "^1.1.3",
     "css-loader": "^0.25.0",
     "electron": "^1.4.4",
     "electron-debug": "^1.0.1",
     "electron-packager": "^8.1.0",
-    "electron-prebuilt": "^1.4.2",
+    "expect.js": "^0.3.1",
+    "istanbul": "^1.1.0-alpha.1",
     "keen-tracking": "^1.0.4",
+    "mocha": "^3.1.2",
     "node-sass": "^3.10.1",
     "nodemon": "^1.11.0",
     "opbeat": "^3.19.2",
     "sass-loader": "^4.0.2",
     "snyk": "^1.19.1",
     "style-loader": "^0.13.1",
+    "tap": "^8.0.0",
     "webpack": "^1.13.3",
     "xo": "^0.17.0"
   },
   "xo": {
     "ignores": [
-      "build/*"
+      "build/*",
+      "**/*.test.js"
     ],
     "esnext": true,
     "envs": [

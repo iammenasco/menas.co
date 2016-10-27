@@ -4,10 +4,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/iammenasco/menasco-journal/badge.svg)](https://snyk.io/test/github/iammenasco/menasco-journal)
 
 
-# Menasco - An online/macOS Journaling Tool
-
-> My polished app
-
+# menas.co - An online/macOS Journaling Tool
 
 ## Dev
 
@@ -25,6 +22,12 @@ $ npm start
 
 ```
 $ npm run build
+```
+
+### Test
+
+```
+$ npm test
 ```
 
 Builds the app for OS X, Linux, and Windows, using [electron-packager](https://github.com/maxogden/electron-packager).
