@@ -41,6 +41,7 @@
     "electron-debug": "^1.0.1",
     "electron-packager": "^8.1.0",
     "electron-prebuilt": "^1.4.2",
+    "keen-tracking": "^1.0.4",
     "node-sass": "^3.10.1",
     "nodemon": "^1.11.0",
     "opbeat": "^3.19.2",
