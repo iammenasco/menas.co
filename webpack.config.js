@@ -45,6 +45,8 @@ module.exports = {
     new BrowserSyncPlugin({
       host: 'localhost',
       port,
+      notify: false,
+      ghostMode: false,
       open: false,
       files: ['index.html', 'index.css', 'build/main.js'],
       server: {
