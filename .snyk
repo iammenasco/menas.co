@@ -28,3 +28,6 @@ patch:
   'npm:tough-cookie:20160722':
     - browser-sync > localtunnel > request > tough-cookie:
         patched: '2016-10-25T16:41:30.263Z'
+  'npm:minimatch:20160620':
+    - istanbul > istanbul-api > fileset > minimatch:
+        patched: '2016-10-27T17:08:49.889Z'
