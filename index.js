@@ -1,5 +1,8 @@
 'use strict';
 const {app, BrowserWindow, crashReporter} = require('electron');
+const opbeat = require('opbeat');
+
+opbeat.start();
 
 // report crashes to the Electron project
 crashReporter.start({

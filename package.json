@@ -32,22 +32,23 @@
     "electron-app"
   ],
   "dependencies": {
-    "electron": "^1.4.2",
-    "electron-debug": "^1.0.1",
-    "node-sass": "^3.3.3",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
     "browser-sync": "^2.9.6",
     "browser-sync-webpack-plugin": "^1.0.0",
     "css-loader": "^0.25.0",
-    "sass-loader": "^4.0.2",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.12.2",
-    "nodemon": "^1.7.0",
+    "electron": "^1.4.2",
+    "electron-debug": "^1.0.1",
     "electron-packager": "^8.1.0",
     "electron-prebuilt": "^1.4.2",
-    "xo": "^0.16.0",
-    "snyk": "^1.19.1"
+    "node-sass": "^3.3.3",
+    "nodemon": "^1.7.0",
+    "opbeat": "^3.19.2",
+    "sass-loader": "^4.0.2",
+    "snyk": "^1.19.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.12.2",
+    "xo": "^0.16.0"
   },
   "xo": {
     "ignores": [
