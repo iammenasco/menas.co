@@ -4,18 +4,30 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express > connect:
         reason: None given
         expires: '2016-11-24T16:41:30.203Z'
+    - browser-sync > browser-sync-ui > weinre > express > connect:
+        reason: None given
+        expires: '2017-01-04T19:42:43.039Z'
   'npm:express:20140912':
     - browser-sync > browser-sync-ui > weinre > express:
         reason: None given
         expires: '2016-11-24T16:41:30.203Z'
+    - browser-sync > browser-sync-ui > weinre > express:
+        reason: None given
+        expires: '2017-01-04T19:42:43.096Z'
   'npm:qs:20140806':
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: None given
         expires: '2016-11-24T16:41:30.203Z'
+    - browser-sync > browser-sync-ui > weinre > express > qs:
+        reason: None given
+        expires: '2017-01-04T19:42:43.096Z'
   'npm:qs:20140806-1':
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: None given
         expires: '2016-11-24T16:41:30.204Z'
+    - browser-sync > browser-sync-ui > weinre > express > qs:
+        reason: None given
+        expires: '2017-01-04T19:42:43.096Z'
 patch:
   'npm:hawk:20160119':
     - electron-packager > asar > mksnapshot > request > hawk:
