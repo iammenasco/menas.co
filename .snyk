@@ -1,4 +1,4 @@
-version: v1.5.0
+version: v1.5.2
 ignore:
   'npm:connect:20130701':
     - browser-sync > browser-sync-ui > weinre > express > connect:
@@ -31,15 +31,31 @@ ignore:
 patch:
   'npm:hawk:20160119':
     - electron-packager > asar > mksnapshot > request > hawk:
-        patched: '2016-10-25T16:41:30.263Z'
+        patched: '2016-12-06T19:14:50.443Z'
   'npm:request:20160119':
     - browser-sync > localtunnel > request:
-        patched: '2016-10-25T16:41:30.263Z'
+        patched: '2016-12-06T19:14:50.443Z'
     - electron-packager > asar > mksnapshot > request:
-        patched: '2016-10-25T16:41:30.263Z'
+        patched: '2016-12-06T19:14:50.443Z'
   'npm:tough-cookie:20160722':
     - browser-sync > localtunnel > request > tough-cookie:
-        patched: '2016-10-25T16:41:30.263Z'
+        patched: '2016-12-06T19:14:50.443Z'
+    - nodemon > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2016-12-06T19:13:05.962Z'
+      browser-sync > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2016-12-06T19:14:50.443Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2016-12-06T19:13:05.962Z'
+      nodemon > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2016-12-06T19:14:50.443Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2016-12-06T19:13:05.962Z'
+      webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2016-12-06T19:14:50.443Z'
+    - browser-sync > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2016-12-06T19:13:05.962Z'
+      babel-cli > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2016-12-06T19:14:50.443Z'
   'npm:minimatch:20160620':
     - istanbul > istanbul-api > fileset > minimatch:
-        patched: '2016-10-27T17:08:49.889Z'
+        patched: '2016-12-06T19:14:50.443Z'
