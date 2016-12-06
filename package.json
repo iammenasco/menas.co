@@ -15,7 +15,7 @@
   },
   "electronVersion": "0.34.0",
   "scripts": {
-    "test": "xo; babel-node ./node_modules/istanbul/lib/cli.js --include-all-sources cover ./node_modules/.bin/_mocha -- ./src/**/*.test.js -R spec --recursive",
+    "test": "snyk test && xo; babel-node ./node_modules/istanbul/lib/cli.js --include-all-sources cover mocha -- ./src/**/*.test.js -R spec --recursive",
     "update": "ncu --upgradeAll",
     "build": "export NODE_ENV='production'; electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --version=$npm_package_electronVersion",
     "build-sass": "node-sass --include-path src/styles --source-map index.map src/styles/index.scss index.css",
