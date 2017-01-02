@@ -1,4 +1,6 @@
-version: v1.5.2
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.0
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:connect:20130701':
     - browser-sync > browser-sync-ui > weinre > express > connect:
@@ -28,34 +30,41 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: None given
         expires: '2017-01-04T19:42:43.096Z'
+# patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:hawk:20160119':
     - electron-packager > asar > mksnapshot > request > hawk:
-        patched: '2016-12-06T19:14:50.443Z'
+        patched: '2016-12-18T16:38:28.329Z'
   'npm:request:20160119':
     - browser-sync > localtunnel > request:
         patched: '2016-12-06T19:14:50.443Z'
     - electron-packager > asar > mksnapshot > request:
         patched: '2016-12-06T19:14:50.443Z'
+    - electron-packager > asar > mksnapshot > request:
+        patched: '2016-12-18T16:38:28.329Z'
   'npm:tough-cookie:20160722':
     - browser-sync > localtunnel > request > tough-cookie:
         patched: '2016-12-06T19:14:50.443Z'
     - nodemon > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
         patched: '2016-12-06T19:13:05.962Z'
-      browser-sync > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
-        patched: '2016-12-06T19:14:50.443Z'
     - webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
-        patched: '2016-12-06T19:13:05.962Z'
-      nodemon > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
-        patched: '2016-12-06T19:14:50.443Z'
+        patched: '2016-12-18T16:38:28.329Z'
     - babel-cli > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
-        patched: '2016-12-06T19:13:05.962Z'
-      webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
-        patched: '2016-12-06T19:14:50.443Z'
+        patched: '2016-12-18T16:38:28.329Z'
     - browser-sync > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
         patched: '2016-12-06T19:13:05.962Z'
-      babel-cli > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+    - browser-sync > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
         patched: '2016-12-06T19:14:50.443Z'
+    - nodemon > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2016-12-06T19:14:50.443Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2016-12-06T19:14:50.443Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2016-12-06T19:14:50.443Z'
+    - nodemon > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2016-12-18T16:38:28.329Z'
+    - browser-sync > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2016-12-18T16:38:28.329Z'
   'npm:minimatch:20160620':
     - istanbul > istanbul-api > fileset > minimatch:
-        patched: '2016-12-06T19:14:50.443Z'
+        patched: '2017-01-02T15:09:01.312Z'
