@@ -2,3 +2,6 @@ language: node_js
 node_js:
   - 4
 sudo: false
+addons:
+    code_climate:
+        repo_token: c2661807edddb71c932d8d69786b7174e0f22cf33a366a653e1ced8493f5abce
