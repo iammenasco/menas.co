@@ -39,9 +39,8 @@ body {
   font-size: 17vw;
   line-height: 15vw;
 }
-button {
+.rerun {
   opacity: 0;
-  overflow: hidden;
   color: #5A8F90;
   border: .2vw solid #5A8F90;
   background-color: transparent;
@@ -54,8 +53,8 @@ button {
   outline: none;
   transition: transform .125s;
 }
-button:active {
-	transform: translate(0px, 5px);
+.rerun:active {
+  transform: translate(0px, 5px);
   -webkit-transform: translate(0px, 5px);
 }
 
