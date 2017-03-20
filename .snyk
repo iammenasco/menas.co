@@ -68,3 +68,6 @@ patch:
   'npm:minimatch:20160620':
     - istanbul > istanbul-api > fileset > minimatch:
         patched: '2017-01-02T15:09:01.312Z'
+  'npm:qs:20170213':
+    - browser-sync > qs:
+        patched: '2017-03-20T09:51:00.698Z'
