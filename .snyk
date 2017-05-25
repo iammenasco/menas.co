@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.0
+version: v1.7.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:connect:20130701':
@@ -109,3 +109,46 @@ patch:
         patched: '2017-04-12T16:07:22.180Z'
     - browser-sync > socket.io > socket.io-client > engine.io-client > ws:
         patched: '2017-04-12T16:07:22.180Z'
+  'npm:ms:20170412':
+    - browser-sync > serve-index > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - mocha > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - browser-sync > socket.io > engine.io > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - browser-sync > socket.io > socket.io-adapter > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - browser-sync > socket.io-client > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - browser-sync > socket.io > socket.io-client > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - browser-sync > socket.io-client > engine.io-client > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - browser-sync > socket.io > socket.io-client > engine.io-client > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - browser-sync > connect > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - browser-sync > connect > finalhandler > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - browser-sync > socket.io > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - browser-sync > localtunnel > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - browser-sync > socket.io > socket.io-parser > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - browser-sync > socket.io > socket.io-adapter > socket.io-parser > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - browser-sync > socket.io-client > socket.io-parser > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - browser-sync > socket.io > socket.io-client > socket.io-parser > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - electron > extract-zip > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - electron-packager > extract-zip > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - xo > eslint-plugin-import > eslint-module-utils > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - browser-sync > serve-static > send > ms:
+        patched: '2017-05-25T02:32:16.910Z'
+    - browser-sync > serve-static > send > debug > ms:
+        patched: '2017-05-25T02:32:16.910Z'
