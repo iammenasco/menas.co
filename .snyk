@@ -15,6 +15,9 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express > connect:
         reason: None given
         expires: '2017-08-11T13:44:11.349Z'
+    - browser-sync > browser-sync-ui > weinre > express > connect:
+        reason: None given
+        expires: '2017-09-15T14:04:28.753Z'
   'npm:express:20140912':
     - browser-sync > browser-sync-ui > weinre > express:
         reason: None given
@@ -28,6 +31,9 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express:
         reason: None given
         expires: '2017-08-11T13:44:11.349Z'
+    - browser-sync > browser-sync-ui > weinre > express:
+        reason: None given
+        expires: '2017-09-15T14:04:28.753Z'
   'npm:qs:20140806':
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: None given
@@ -41,6 +47,9 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: None given
         expires: '2017-08-11T13:44:11.349Z'
+    - browser-sync > browser-sync-ui > weinre > express > qs:
+        reason: None given
+        expires: '2017-09-15T14:04:28.753Z'
   'npm:qs:20140806-1':
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: None given
@@ -54,6 +63,9 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: None given
         expires: '2017-08-11T13:44:11.349Z'
+    - browser-sync > browser-sync-ui > weinre > express > qs:
+        reason: None given
+        expires: '2017-09-15T14:04:28.753Z'
   'npm:concat-stream:20160901':
     - electron > extract-zip > concat-stream:
         reason: None given
@@ -68,6 +80,9 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express > connect:
         reason: None given
         expires: '2017-08-11T13:44:11.348Z'
+    - browser-sync > browser-sync-ui > weinre > express > connect:
+        reason: None given
+        expires: '2017-09-15T14:04:28.752Z'
   'npm:qs:20170213':
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: None given
@@ -75,6 +90,9 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: None given
         expires: '2017-08-11T13:44:11.349Z'
+    - browser-sync > browser-sync-ui > weinre > express > qs:
+        reason: None given
+        expires: '2017-09-15T14:04:28.753Z'
   'npm:shelljs:20140723':
     - xo > eslint > shelljs:
         reason: None given
@@ -82,10 +100,16 @@ ignore:
     - xo > eslint > shelljs:
         reason: None given
         expires: '2017-08-11T13:44:11.349Z'
+    - xo > eslint > shelljs:
+        reason: None given
+        expires: '2017-09-15T14:04:28.753Z'
   'npm:growl:20160721':
     - mocha > growl:
         reason: None given
         expires: '2017-08-11T13:44:11.349Z'
+    - mocha > growl:
+        reason: None given
+        expires: '2017-09-15T14:04:28.753Z'
   'npm:tunnel-agent:20170305':
     - codeclimate-test-reporter > request > tunnel-agent:
         reason: None given
@@ -96,6 +120,12 @@ ignore:
     - browser-sync > localtunnel > request > tunnel-agent:
         reason: None given
         expires: '2017-08-11T13:44:11.349Z'
+    - codeclimate-test-reporter > request > tunnel-agent:
+        reason: None given
+        expires: '2017-09-15T14:04:28.753Z'
+    - tap > coveralls > request > tunnel-agent:
+        reason: None given
+        expires: '2017-09-15T14:04:28.753Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:hawk:20160119':
