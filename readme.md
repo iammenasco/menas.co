@@ -4,7 +4,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/iammenasco/menas.co/badge.svg)](https://snyk.io/test/github/iammenasco/menas.co)
 
 
-# menas.co - An online/macOS Journaling Tool
+# menas.co
 
 ## Dev
 
@@ -29,9 +29,6 @@ $ npm run build
 ```
 $ npm test
 ```
-
-Builds the app for OS X, Linux, and Windows, using [electron-packager](https://github.com/maxogden/electron-packager).
-
 
 ## License
 
