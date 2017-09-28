@@ -217,3 +217,42 @@ patch:
         patched: '2017-05-25T02:32:16.910Z'
     - browser-sync > serve-static > send > debug > ms:
         patched: '2017-05-25T02:32:16.910Z'
+  'npm:debug:20170905':
+    - browser-sync > socket.io > socket.io-client > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - mocha > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - browser-sync > connect > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - browser-sync > connect > finalhandler > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - browser-sync > serve-index > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - browser-sync > socket.io > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - browser-sync > socket.io > engine.io > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - browser-sync > socket.io > socket.io-adapter > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - browser-sync > socket.io-client > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - browser-sync > localtunnel > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - browser-sync > socket.io-client > engine.io-client > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - browser-sync > socket.io > socket.io-client > engine.io-client > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - electron > extract-zip > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - electron-packager > extract-zip > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - browser-sync > socket.io > socket.io-parser > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - browser-sync > socket.io-client > socket.io-parser > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - browser-sync > socket.io > socket.io-client > socket.io-parser > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - browser-sync > socket.io > socket.io-adapter > socket.io-parser > debug:
+        patched: '2017-09-28T02:32:21.564Z'
+    - browser-sync > serve-static > send > debug:
+        patched: '2017-09-28T02:32:21.564Z'
