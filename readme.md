@@ -6,6 +6,9 @@
 
 # menas.co
 
+#### Note:
+I stopped paying for my webhosting. Check out my codepens to see this in action!
+
 ## Dev
 
 ```
