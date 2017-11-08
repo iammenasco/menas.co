@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.1
+version: v1.8.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:connect:20130701':
@@ -21,6 +21,9 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express > connect:
         reason: None given
         expires: '2017-11-03T13:49:35.624Z'
+    - browser-sync > browser-sync-ui > weinre > express > connect:
+        reason: None given
+        expires: '2017-12-08T14:18:31.671Z'
   'npm:express:20140912':
     - browser-sync > browser-sync-ui > weinre > express:
         reason: None given
@@ -40,6 +43,9 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express:
         reason: None given
         expires: '2017-11-03T13:49:35.624Z'
+    - browser-sync > browser-sync-ui > weinre > express:
+        reason: None given
+        expires: '2017-12-08T14:18:31.671Z'
   'npm:qs:20140806':
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: None given
@@ -59,6 +65,9 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: None given
         expires: '2017-11-03T13:49:35.624Z'
+    - browser-sync > browser-sync-ui > weinre > express > qs:
+        reason: None given
+        expires: '2017-12-08T14:18:31.672Z'
   'npm:qs:20140806-1':
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: None given
@@ -78,6 +87,9 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: None given
         expires: '2017-11-03T13:49:35.624Z'
+    - browser-sync > browser-sync-ui > weinre > express > qs:
+        reason: None given
+        expires: '2017-12-08T14:18:31.672Z'
   'npm:concat-stream:20160901':
     - electron > extract-zip > concat-stream:
         reason: None given
@@ -98,6 +110,9 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express > connect:
         reason: None given
         expires: '2017-11-03T13:49:35.624Z'
+    - browser-sync > browser-sync-ui > weinre > express > connect:
+        reason: None given
+        expires: '2017-12-08T14:18:31.671Z'
   'npm:qs:20170213':
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: None given
@@ -111,6 +126,9 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express > qs:
         reason: None given
         expires: '2017-11-03T13:49:35.625Z'
+    - browser-sync > browser-sync-ui > weinre > express > qs:
+        reason: None given
+        expires: '2017-12-08T14:18:31.672Z'
   'npm:shelljs:20140723':
     - xo > eslint > shelljs:
         reason: None given
@@ -124,6 +142,9 @@ ignore:
     - xo > eslint > shelljs:
         reason: None given
         expires: '2017-11-03T13:49:35.625Z'
+    - xo > eslint > shelljs:
+        reason: None given
+        expires: '2017-12-08T14:18:31.672Z'
   'npm:growl:20160721':
     - mocha > growl:
         reason: None given
@@ -153,6 +174,12 @@ ignore:
     - tap > coveralls > request > tunnel-agent:
         reason: None given
         expires: '2017-11-03T13:49:35.625Z'
+    - codeclimate-test-reporter > request > tunnel-agent:
+        reason: None given
+        expires: '2017-12-08T14:18:31.672Z'
+    - tap > coveralls > request > tunnel-agent:
+        reason: None given
+        expires: '2017-12-08T14:18:31.672Z'
   'npm:fresh:20170908':
     - browser-sync > browser-sync-client > fresh:
         reason: None given
@@ -160,6 +187,12 @@ ignore:
     - browser-sync > serve-static > send > fresh:
         reason: None given
         expires: '2017-11-03T13:49:35.624Z'
+    - browser-sync > browser-sync-client > fresh:
+        reason: None given
+        expires: '2017-12-08T14:18:31.671Z'
+    - browser-sync > serve-static > send > fresh:
+        reason: None given
+        expires: '2017-12-08T14:18:31.671Z'
   'npm:mime:20170907':
     - browser-sync > serve-static > send > mime:
         reason: None given
@@ -167,6 +200,12 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express > mime:
         reason: None given
         expires: '2017-11-03T13:49:35.624Z'
+    - browser-sync > serve-static > send > mime:
+        reason: None given
+        expires: '2017-12-08T14:18:31.671Z'
+    - browser-sync > browser-sync-ui > weinre > express > mime:
+        reason: None given
+        expires: '2017-12-08T14:18:31.672Z'
   'npm:parsejson:20170908':
     - browser-sync > socket.io-client > engine.io-client > parsejson:
         reason: None given
@@ -174,6 +213,12 @@ ignore:
     - browser-sync > socket.io > socket.io-client > engine.io-client > parsejson:
         reason: None given
         expires: '2017-11-03T13:49:35.624Z'
+    - browser-sync > socket.io-client > engine.io-client > parsejson:
+        reason: None given
+        expires: '2017-12-08T14:18:31.672Z'
+    - browser-sync > socket.io > socket.io-client > engine.io-client > parsejson:
+        reason: None given
+        expires: '2017-12-08T14:18:31.672Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:hawk:20160119':
