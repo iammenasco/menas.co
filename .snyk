@@ -180,6 +180,9 @@ ignore:
     - tap > coveralls > request > tunnel-agent:
         reason: None given
         expires: '2017-12-08T14:18:31.672Z'
+    - node-sass > request > tunnel-agent:
+        reason: None given
+        expires: '2017-12-29T14:54:04.479Z'
   'npm:fresh:20170908':
     - browser-sync > browser-sync-client > fresh:
         reason: None given
@@ -219,6 +222,16 @@ ignore:
     - browser-sync > socket.io > socket.io-client > engine.io-client > parsejson:
         reason: None given
         expires: '2017-12-08T14:18:31.672Z'
+  'npm:ws:20171108':
+    - browser-sync > socket.io > engine.io > ws:
+        reason: None given
+        expires: '2017-12-29T14:54:04.480Z'
+    - browser-sync > socket.io-client > engine.io-client > ws:
+        reason: None given
+        expires: '2017-12-29T14:54:04.480Z'
+    - browser-sync > socket.io > socket.io-client > engine.io-client > ws:
+        reason: None given
+        expires: '2017-12-29T14:54:04.480Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:hawk:20160119':
