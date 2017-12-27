@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.8.0
+version: v1.10.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:connect:20130701':
@@ -145,6 +145,9 @@ ignore:
     - xo > eslint > shelljs:
         reason: None given
         expires: '2017-12-08T14:18:31.672Z'
+    - xo > eslint > shelljs:
+        reason: None given
+        expires: '2018-01-26T13:48:44.063Z'
   'npm:growl:20160721':
     - mocha > growl:
         reason: None given
@@ -180,6 +183,15 @@ ignore:
     - tap > coveralls > request > tunnel-agent:
         reason: None given
         expires: '2017-12-08T14:18:31.672Z'
+    - codeclimate-test-reporter > request > tunnel-agent:
+        reason: None given
+        expires: '2018-01-26T13:48:44.063Z'
+    - node-sass > request > tunnel-agent:
+        reason: None given
+        expires: '2018-01-26T13:48:44.063Z'
+    - tap > coveralls > request > tunnel-agent:
+        reason: None given
+        expires: '2018-01-26T13:48:44.063Z'
   'npm:fresh:20170908':
     - browser-sync > browser-sync-client > fresh:
         reason: None given
@@ -193,6 +205,9 @@ ignore:
     - browser-sync > serve-static > send > fresh:
         reason: None given
         expires: '2017-12-08T14:18:31.671Z'
+    - browser-sync > serve-static > send > fresh:
+        reason: None given
+        expires: '2018-01-26T13:48:44.063Z'
   'npm:mime:20170907':
     - browser-sync > serve-static > send > mime:
         reason: None given
@@ -206,6 +221,9 @@ ignore:
     - browser-sync > browser-sync-ui > weinre > express > mime:
         reason: None given
         expires: '2017-12-08T14:18:31.672Z'
+    - browser-sync > serve-static > send > mime:
+        reason: None given
+        expires: '2018-01-26T13:48:44.063Z'
   'npm:parsejson:20170908':
     - browser-sync > socket.io-client > engine.io-client > parsejson:
         reason: None given
@@ -219,6 +237,13 @@ ignore:
     - browser-sync > socket.io > socket.io-client > engine.io-client > parsejson:
         reason: None given
         expires: '2017-12-08T14:18:31.672Z'
+    - browser-sync > socket.io-client > engine.io-client > parsejson:
+        reason: None given
+        expires: '2018-01-26T13:48:44.063Z'
+  'npm:ws:20171108':
+    - browser-sync > socket.io-client > engine.io-client > ws:
+        reason: None given
+        expires: '2018-01-26T13:48:44.064Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:hawk:20160119':
