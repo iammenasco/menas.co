@@ -1,4 +1,4 @@
-const rerunButton = document.querySelector('.rerun');
+const iammenasco = document.querySelector('.iammenasco');
 const i = document.querySelector('.i');
 const am = document.querySelector('.am');
 const menasco = document.querySelector('.menasco');
@@ -13,26 +13,28 @@ const aurorals = [
   'northern-warm'
 ];
 
-const rerunAnimation = () => {
-  i.classList.remove('i-animate');
-  am.classList.remove('am-animate');
-  menasco.classList.remove('menasco-animate');
-  rerunButton.classList.remove('rerun-animate');
-
-  const trick = rerunButton.offsetWidth;
-
-  i.classList.add('i-animate');
-  am.classList.add('am-animate');
-  menasco.classList.add('menasco-animate');
-  rerunButton.classList.add('rerun-animate');
-
-  return trick;
-};
-
 const randomAuroral = () => {
   const colorScheme = aurorals[Math.floor(Math.random() * aurorals.length)];
   auroral.className = `auroral-${colorScheme}`;
 };
 
-rerunButton.addEventListener('click', rerunAnimation);
+const rerunAnimation = () => {
+  i.classList.remove('i-animate');
+  am.classList.remove('am-animate');
+  menasco.classList.remove('menasco-animate');
+  iammenasco.classList.remove('rerun-animate');
+
+  const trick = iammenasco.offsetWidth;
+
+  i.classList.add('i-animate');
+  am.classList.add('am-animate');
+  menasco.classList.add('menasco-animate');
+  iammenasco.classList.add('rerun-animate');
+
+  randomAuroral();
+
+  return trick;
+};
+
+document.addEventListener('click', rerunAnimation);
 document.addEventListener('DOMContentLoaded', randomAuroral);

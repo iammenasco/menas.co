@@ -168,7 +168,7 @@ body {
 .iammenasco {
   margin-left: 7%;
   position: absolute;
-  top: 30%;
+  top: 35%;
   width: 100%;
 }
 
@@ -198,43 +198,6 @@ body {
   line-height: 15vw;
 }
 
-.rerun {
-  opacity: 0;
-  color: #2FE6DD;
-  border: .2vw solid #5A8F90;
-  background-color: #358dda;
-  background-color: rgba(54, 141, 218, 0.1);
-  cursor: pointer;
-  line-height: 5vw;
-  padding: 0 2vw;
-  margin-top: 1vw;
-  border-radius: 5px;
-  font-size: 3vw;
-  outline: none;
-  transition: border-color 0.5s ease;
-}
-
-.rerun:hover,
-#doorbell-button:hover {
-  border-color: #2FE6DD;
-}
-
-.rerun:active,
-#doorbell-button:active {
-  box-shadow: 0 0 10px 3px white;
-}
-
-#doorbell-button {
-  color: #2FE6DD;
-  border: .2vw solid #5A8F90;
-  border-bottom: none;
-  background-color: #368dda;
-  background-color: rgba(54, 141, 218, 0.1);
-  font-size: 2vw;
-  transition: border-color 0.5s ease;
-  outline: none;
-}
-
 /* animation */
 .i-animate {
   -webkit-animation: kapow .1s forwards;
@@ -261,15 +224,6 @@ body {
   animation: kapow .1s forwards;
   animation-iteration-count: 1;
   animation-delay: 2.1s;
-}
-
-.rerun-animate {
-  -webkit-animation: kapow .5s forwards;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-delay: 3s;
-  animation: kapow .5s forwards;
-  animation-iteration-count: 1;
-  animation-delay: 3s;
 }
 
 @-webkit-keyframes kapow {
