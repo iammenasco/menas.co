@@ -2,14 +2,16 @@
   "name": "menas.co",
   "version": "1.0.0",
   "description": "Landing Page for menas.co",
-  "main": "webpack.config.js",
+  "main": "index.html",
   "scripts": {
-    "start": "http-server -p ${PORT:=3000}"
+    "start": "http-server -p ${PORT:=3000}",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "http-server": "^0.10.0",
-    "snyk": "^1.62.2"
+    "snyk": "^1.65.1"
   },
   "snyk": true
 }
