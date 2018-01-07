@@ -202,7 +202,8 @@ body {
   opacity: 0;
   color: #2FE6DD;
   border: .2vw solid #5A8F90;
-  background-color:rgba(54, 141, 218, 0.1);
+  background-color: #358dda;
+  background-color: rgba(54, 141, 218, 0.1);
   cursor: pointer;
   line-height: 5vw;
   padding: 0 2vw;
@@ -220,17 +221,21 @@ body {
 
 .rerun:active,
 #doorbell-button:active {
-  box-shadow: 0px 0px 10px 3px white;
+  box-shadow: 0 0 10px 3px white;
+}
+
+#doorbell-button:focus {
+  outline: none;
 }
 
 #doorbell-button {
   color: #2FE6DD;
   border: .2vw solid #5A8F90;
   border-bottom: none;
-  background-color:rgba(54, 141, 218, 0.1);
+  background-color: #368dda;
+  background-color: rgba(54, 141, 218, 0.1);
   font-size: 2vw;
   transition: border-color 0.5s ease;
-  outline: none;
 }
 
 /* animation */

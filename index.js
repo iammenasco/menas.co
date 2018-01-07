@@ -11,7 +11,7 @@ const aurorals = [
   'northern-dimmed',
   'northern-dusk',
   'northern-warm'
-]
+];
 
 const rerunAnimation = () => {
   i.classList.remove('i-animate');
