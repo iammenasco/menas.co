@@ -224,10 +224,6 @@ body {
   box-shadow: 0 0 10px 3px white;
 }
 
-#doorbell-button:focus {
-  outline: none;
-}
-
 #doorbell-button {
   color: #2FE6DD;
   border: .2vw solid #5A8F90;
@@ -236,6 +232,7 @@ body {
   background-color: rgba(54, 141, 218, 0.1);
   font-size: 2vw;
   transition: border-color 0.5s ease;
+  outline: none;
 }
 
 /* animation */
