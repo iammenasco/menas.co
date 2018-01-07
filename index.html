@@ -2,29 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>menas.co - A Journaling App</title>
+    <title>menas.co</title>
     <link rel="stylesheet" href="index.css">
-    <script type="text/javascript">
-  !function(name,path,ctx){
-    var latest,prev=name!=='Keen'&&window.Keen?window.Keen:false;ctx[name]=ctx[name]||{ready:function(fn){var h=document.getElementsByTagName('head')[0],s=document.createElement('script'),w=window,loaded;s.onload=s.onerror=s.onreadystatechange=function(){if((s.readyState&&!(/^c|loade/.test(s.readyState)))||loaded){return}s.onload=s.onreadystatechange=null;loaded=1;latest=w.Keen;if(prev){w.Keen=prev}else{try{delete w.Keen}catch(e){w.Keen=void 0}}ctx[name]=latest;ctx[name].ready(fn)};s.async=1;s.src=path;h.parentNode.insertBefore(s,h)}}
-  }('KeenAsync','https://d26b395fwzu5fz.cloudfront.net/keen-tracking-1.0.3.min.js',this);
-
-  KeenAsync.ready(function(){
-    // Configure a client instance
-    var client = new KeenAsync({
-      projectId: '581171f38db53dfda8a75943',
-      writeKey: '1256DD332321C74A0630627C37CE79A506A2F743487BD2E9A77F6BEF77C5DCDF76FFC3C10D9B577ABC1364683484F2834C7612BBBB5BDCC5D50006ECBCC51B267CD9AFCD39F49BF60C4F6278C885CAC45D29D3582F5C618D9F0E82C9C199FEF8'
-    });
-
-    // Record an event
-    client.recordEvent('pageviews', {
-      title: document.title
-    });
-  });
-</script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <div class="auroral-northern"></div>
+    <div id="auroral"></div>
     <div class="auroral-stars"></div>
     <div class="iammenasco" id="iammenasco">
       <div class="iam">
@@ -34,7 +18,7 @@
       <button id="button" class="rerun rerun-animate">Rerun</button>
     </div>
 
-    <script type="text/javascript" src="build/main.js"></script>
+    <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript">
     window.doorbellOptions = {
         appKey: 'veE20K5eqHMm1qtcOoEJGOPfapurwMQk2N4hSv2bnEXN1wFXM3oTznx5hRnzFFtQ'

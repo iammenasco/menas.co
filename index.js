@@ -1,69 +1,38 @@
-'use strict';
-const {app, BrowserWindow, crashReporter} = require('electron');
-const opbeat = require('opbeat');
+const rerunButton = document.querySelector('.rerun');
+const i = document.querySelector('.i');
+const am = document.querySelector('.am');
+const menasco = document.querySelector('.menasco');
+const auroral = document.getElementById('auroral');
 
-opbeat.start();
+const aurorals = [
+  'agrabah',
+  'northern',
+  'northern-intense',
+  'northern-dimmed',
+  'northern-dusk',
+  'northern-warm'
+]
 
-// report crashes to the Electron project
-crashReporter.start({
-  productName: 'Menasco Journal',
-  companyName: 'I Am Menasco',
-  submitURL: 'https://electron-crash-reporter.appspot.com/5136269650690048/create/',
-  autoSubmit: true
-});
+const rerunAnimation = () => {
+  i.classList.remove('i-animate');
+  am.classList.remove('am-animate');
+  menasco.classList.remove('menasco-animate');
+  rerunButton.classList.remove('rerun-animate');
 
-// adds debug features like hotkeys for triggering dev tools and reload
-require('electron-debug')();
+  const trick = rerunButton.offsetWidth;
 
-let indexFile = `${__dirname}/index.html`;
+  i.classList.add('i-animate');
+  am.classList.add('am-animate');
+  menasco.classList.add('menasco-animate');
+  rerunButton.classList.add('rerun-animate');
 
-const port = process.env.PORT || 3000;
+  return trick;
+};
 
-if (process.env.NODE_ENV === 'dev') {
-  indexFile = 'http://localhost:' + port;
-}
+const randomAuroral = () => {
+  const colorScheme = aurorals[Math.floor(Math.random() * aurorals.length)];
+  auroral.className = `auroral-${colorScheme}`;
+};
 
-// prevent window being garbage collected
-let mainWindow;
-
-function onClosed() {
-  // dereference the window
-  // for multiple windows store them in an array
-  mainWindow = null;
-}
-
-function createMainWindow() {
-  const win = new BrowserWindow({
-    width: 600,
-    height: 400
-  });
-
-  if (process.env.NODE_ENV === 'dev') {
-    // we need to wait until browsersync is ready
-    setTimeout(() => {
-      win.loadURL(indexFile);
-    }, 1000);
-  } else {
-    win.loadURL(`file:${indexFile}`);
-  }
-
-  win.on('closed', onClosed);
-
-  return win;
-}
-
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
-});
-
-app.on('activate-with-no-open-windows', () => {
-  if (!mainWindow) {
-    mainWindow = createMainWindow();
-  }
-});
-
-app.on('ready', () => {
-  mainWindow = createMainWindow();
-});
+rerunButton.addEventListener('click', rerunAnimation);
+document.addEventListener('DOMContentLoaded', randomAuroral);
