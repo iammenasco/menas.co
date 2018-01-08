@@ -166,7 +166,7 @@ body {
 .iammenasco {
   margin-left: 7%;
   position: absolute;
-  top: 35%;
+  top: 30%;
   width: 100%;
 }
 
@@ -196,30 +196,50 @@ body {
   line-height: 15vw;
 }
 
+.links {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 65%;
+  width: 100%;
+  text-decoration: none;
+  opacity: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link img {
+  height: 96px;
+  width: 150px;
+}
+
 /* animation */
 .i-animate {
-  -webkit-animation: kapow .1s forwards;
+  -webkit-animation: kapow .15s forwards;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-delay: 1.2s;
-  animation: kapow .1s forwards;
+  animation: kapow .15s forwards;
   animation-iteration-count: 1;
   animation-delay: 1.2s;
 }
 
 .am-animate {
-  -webkit-animation: kapow .1s forwards;
+  -webkit-animation: kapow .15s forwards;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-delay: 1.5s;
-  animation: kapow .1s forwards;
+  animation: kapow .15s forwards;
   animation-iteration-count: 1;
   animation-delay: 1.5s;
 }
 
 .menasco-animate {
-  -webkit-animation: kapow .1s forwards;
+  -webkit-animation: kapow .15s forwards;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-delay: 2.1s;
-  animation: kapow .1s forwards;
+  animation: kapow .15s forwards;
   animation-iteration-count: 1;
   animation-delay: 2.1s;
 }
