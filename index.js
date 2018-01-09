@@ -38,5 +38,5 @@ const rerunAnimation = () => {
   return trick;
 };
 
-document.addEventListener('click', rerunAnimation);
+iammenasco.addEventListener('click', rerunAnimation);
 document.addEventListener('DOMContentLoaded', randomAuroral);
