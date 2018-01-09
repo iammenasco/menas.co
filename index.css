@@ -214,6 +214,11 @@ body {
 .link img {
   height: 96px;
   width: 150px;
+  transition: filter .25s;
+}
+
+.link img:hover {
+  filter: drop-shadow(0 0 5px white);
 }
 
 /* animation */
