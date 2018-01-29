@@ -221,29 +221,24 @@ body {
   filter: drop-shadow(0 0 5px white);
 }
 
+.codepen {
+  padding-top: 10px
+}
+
 /* animation */
 .i-animate {
-  -webkit-animation: kapow .15s forwards;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-delay: 1.2s;
   animation: kapow .15s forwards;
   animation-iteration-count: 1;
   animation-delay: 1.2s;
 }
 
 .am-animate {
-  -webkit-animation: kapow .15s forwards;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-delay: 1.5s;
   animation: kapow .15s forwards;
   animation-iteration-count: 1;
   animation-delay: 1.5s;
 }
 
 .menasco-animate {
-  -webkit-animation: kapow .15s forwards;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-delay: 2.1s;
   animation: kapow .15s forwards;
   animation-iteration-count: 1;
   animation-delay: 2.1s;

@@ -6,8 +6,7 @@
 
 # menas.co
 
-#### Note:
-I stopped paying for my webhosting. Check out my codepens to see this in action!
+My amazing website.
 
 ## Dev
 
@@ -19,18 +18,6 @@ $ npm install
 
 ```
 $ npm start
-```
-
-### Build
-
-```
-$ npm run build
-```
-
-### Test
-
-```
-$ npm test
 ```
 
 ## License
