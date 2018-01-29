@@ -221,10 +221,6 @@ body {
   filter: drop-shadow(0 0 5px white);
 }
 
-.codepen {
-  padding-top: 10px
-}
-
 /* animation */
 .i-animate {
   animation: kapow .15s forwards;
