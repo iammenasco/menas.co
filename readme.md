@@ -6,7 +6,7 @@
 
 # menas.co
 
-My amazing website.
+A minimal portfolio that links to sites where my code actually lives.
 
 ## Dev
 
