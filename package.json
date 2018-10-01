@@ -1,7 +1,7 @@
 {
   "name": "menas.co",
   "version": "1.0.0",
-  "description": "Landing Page for menas.co",
+  "description": "menas.co - Minimalist Portfolio",
   "main": "index.html",
   "scripts": {
     "start": "http-server -p ${PORT:=3000}",
