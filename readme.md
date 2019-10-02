@@ -22,4 +22,4 @@ $ npm start
 
 ## License
 
-MIT © [Brian Menasco](https://codepen.io/iammenasco)
+MIT © [Brian Menasco](https://menas.co)
