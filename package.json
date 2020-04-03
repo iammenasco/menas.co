@@ -10,8 +10,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "http-server": "^0.12.1",
-    "snyk": "^2.0.0"
+    "http-server": "*",
+    "snyk": "*"
   },
-  "snyk": true
+  "snyk": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iammenasco/menas.co.git"
+  }
 }
