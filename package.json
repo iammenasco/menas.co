@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "http-server": "*",
-    "snyk": "^1.368.1"
+    "snyk": "^1.374.0"
   },
   "snyk": true,
   "repository": {
