@@ -1,6 +1,6 @@
 # menas.co
 
-A minimal portfolio that links to sites where my code actually lives.
+A minimal portfolio that links to sites where my code actually lives
 
 ## License
 
