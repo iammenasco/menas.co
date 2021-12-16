@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "http-server": "*",
+    "http-server": "14.0.0",
     "snyk": "^1.493.0"
   },
   "snyk": true,
