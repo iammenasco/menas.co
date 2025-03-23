@@ -38,5 +38,16 @@ const rerunAnimation = () => {
   return trick;
 };
 
-iammenasco.addEventListener('click', rerunAnimation);
+// Debounce function to prevent excessive calls
+const debounce = (func, delay) => {
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => func(...args), delay);
+  };
+};
+
+const debouncedRerunAnimation = debounce(rerunAnimation, 300);
+
+iammenasco.addEventListener('click', debouncedRerunAnimation);
 document.addEventListener('DOMContentLoaded', randomAuroral);
