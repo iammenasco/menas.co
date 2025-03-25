@@ -38,16 +38,19 @@ const rerunAnimation = () => {
   return trick;
 };
 
-// Debounce function to prevent excessive calls
-const debounce = (func, delay) => {
-  let timeoutId;
+// ensure execution at most once per interval
+const throttle = (func, limit) => {
+  let inThrottle;
   return (...args) => {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => func(...args), delay);
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
   };
 };
 
-const debouncedRerunAnimation = debounce(rerunAnimation, 300);
+const throttledRerunAnimation = throttle(rerunAnimation, 500);
 
-iammenasco.addEventListener('click', debouncedRerunAnimation);
+iammenasco.addEventListener('click', throttledRerunAnimation);
 document.addEventListener('DOMContentLoaded', randomAuroral);
