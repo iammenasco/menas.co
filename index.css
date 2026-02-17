@@ -2,14 +2,22 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container {
-  width: 100vw;
-  height: 100vh;
+  width: 100vw; /* Fallback */
+  width: 100dvw;
+  height: 100vh; /* Fallback */
+  height: 100dvh;
   overflow: hidden;
   position: relative;
 }
@@ -57,25 +65,33 @@ body {
 }
 
 .auroral-agrabah {
-  position: absolute;
+  position: fixed;
   left: -50%;
   top: -50%;
-  width: 200%;
-  height: 200%;
+  width: 200vw;
+  height: 200vh;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
   animation-name: aura;
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  background: linear-gradient(-20deg, rgba(26, 0, 192, 0.4) 40%, rgba(215, 0, 67, 0.4)), linear-gradient(60deg, #1a00c0 10%, #d70043);
+  background:
+    linear-gradient(-20deg, rgba(26, 0, 192, 0.4) 40%, rgba(215, 0, 67, 0.4)),
+    linear-gradient(60deg, #1a00c0 10%, #d70043);
 }
 
 .auroral-northern {
-  position: absolute;
+  position: fixed;
   left: -50%;
   top: -50%;
-  width: 200%;
-  height: 200%;
+  width: 200vw;
+  height: 200vh;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
   animation-name: northern;
   animation-duration: 10s;
   animation-timing-function: linear;
@@ -85,11 +101,14 @@ body {
 }
 
 .auroral-northern-intense {
-  position: absolute;
+  position: fixed;
   left: -50%;
   top: -50%;
-  width: 200%;
-  height: 200%;
+  width: 200vw;
+  height: 200vh;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
   animation-name: aura;
   animation-duration: 10s;
   animation-timing-function: linear;
@@ -99,45 +118,69 @@ body {
 }
 
 .auroral-northern-dimmed {
-  position: absolute;
+  position: fixed;
   left: -50%;
   top: -50%;
-  width: 200%;
-  height: 200%;
+  width: 200vw;
+  height: 200vh;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
   animation-name: northern;
   animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  background: linear-gradient(-45deg, rgba(237, 124, 148, 0.3) 20%, rgba(35, 82, 154, 0.3) 70%), linear-gradient(10deg, #916b63 7%, #b8ba6f 20%, #ed7c94 40%, #23529a 60%);
+  background:
+    linear-gradient(
+      -45deg,
+      rgba(237, 124, 148, 0.3) 20%,
+      rgba(35, 82, 154, 0.3) 70%
+    ),
+    linear-gradient(10deg, #916b63 7%, #b8ba6f 20%, #ed7c94 40%, #23529a 60%);
 }
 
 .auroral-northern-dusk {
-  position: absolute;
+  position: fixed;
   left: -50%;
   top: -50%;
-  width: 200%;
-  height: 200%;
+  width: 200vw;
+  height: 200vh;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
   animation-name: northern;
   animation-duration: 15s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  background: linear-gradient(-35deg, rgba(145, 107, 99, 0.5) 15%, rgba(184, 186, 111, 0.5) 25%, transparent 60%), linear-gradient(10deg, #916b63 9%, #b8ba6f 30%, #ed7c94 45%, #23529a 65%);
+  background:
+    linear-gradient(
+      -35deg,
+      rgba(145, 107, 99, 0.5) 15%,
+      rgba(184, 186, 111, 0.5) 25%,
+      transparent 60%
+    ),
+    linear-gradient(10deg, #916b63 9%, #b8ba6f 30%, #ed7c94 45%, #23529a 65%);
 }
 
 .auroral-northern-warm {
-  position: absolute;
+  position: fixed;
   left: -50%;
   top: -50%;
-  width: 200%;
-  height: 200%;
+  width: 200vw;
+  height: 200vh;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
   animation-name: aura;
   animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  background: linear-gradient(5deg, transparent 70%, #da7712 95%), linear-gradient(160deg, #432c24 30%, #d96d7d 62%, #da7712 95%);
+  background:
+    linear-gradient(5deg, transparent 70%, #da7712 95%),
+    linear-gradient(160deg, #432c24 30%, #d96d7d 62%, #da7712 95%);
 }
 
 .auroral-stars {
@@ -148,13 +191,116 @@ body {
   width: 1px;
   height: 1px;
   border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
   background: white;
-  box-shadow: 045vw 16vh 0 1px rgba(255, 255, 255, 0.7), 72vw 27vh 0 1px rgba(255, 255, 255, 0.7), 82vw 15vh 0 2px rgba(255, 255, 255, 0.7), 69vw 23vh 0 2px rgba(255, 255, 255, 0.7), 16vw 33vh 0 1px rgba(255, 255, 255, 0.7), 42vw 17vh 0 2px rgba(255, 255, 255, 0.7), 10vw 25vh 0 1px rgba(255, 255, 255, 0.7), 81vw 41vh 0 2px rgba(255, 255, 255, 0.7), 15vw 13vh 0 1px rgba(255, 255, 255, 0.7), 82vw 14vh 0 1px rgba(255, 255, 255, 0.7), 35vw 23vh 0 2px rgba(255, 255, 255, 0.7), 5vw 13vh 0 2px rgba(255, 255, 255, 0.7), 74vw 2vh 0 2px rgba(255, 255, 255, 0.7), 22vw 50vh 0 2px rgba(255, 255, 255, 0.7), 24vw 2vh 0 1px rgba(255, 255, 255, 0.7), 43vw 34vh 0 2px rgba(255, 255, 255, 0.7), 33vw 39vh 0 1px rgba(255, 255, 255, 0.7), 43vw 43vh 0 1px rgba(255, 255, 255, 0.7), 45vw 11vh 0 2px rgba(255, 255, 255, 0.7), 34vw 30vh 0 1px rgba(255, 255, 255, 0.7), 14vw 15vh 0 2px rgba(255, 255, 255, 0.7), 87vw 24vh 0 2px rgba(255, 255, 255, 0.7), 53vw 40vh 0 2px rgba(255, 255, 255, 0.7), 64vw 22vh 0 1px rgba(255, 255, 255, 0.7), 24vw 21vh 0 2px rgba(255, 255, 255, 0.7), 78vw 11vh 0 1px rgba(255, 255, 255, 0.7), 53vw 44vh 0 2px rgba(255, 255, 255, 0.7), 98vw 22vh 0 1px rgba(255, 255, 255, 0.7), 58vw 46vh 0 2px rgba(255, 255, 255, 0.7), 77vw 47vh 0 2px rgba(255, 255, 255, 0.7), 62vw 5vh 0 1px rgba(255, 255, 255, 0.7), 60vw 7vh 0 2px rgba(255, 255, 255, 0.7), 24vw 7vh 0 2px rgba(255, 255, 255, 0.7), 38vw 6vh 0 1px rgba(255, 255, 255, 0.7), 80vw 41vh 0 1px rgba(255, 255, 255, 0.7), 55vw 50vh 0 1px rgba(255, 255, 255, 0.7), 9vw 49vh 0 2px rgba(255, 255, 255, 0.7), 18vw 11vh 0 2px rgba(255, 255, 255, 0.7), 72vw 40vh 0 1px rgba(255, 255, 255, 0.7), 91vw 46vh 0 1px rgba(255, 255, 255, 0.7), 1vw 11vh 0 2px rgba(255, 255, 255, 0.7), 1vw 30vh 0 2px rgba(255, 255, 255, 0.7), 21vw 41vh 0 1px rgba(255, 255, 255, 0.7), 56vw 1vh 0 1px rgba(255, 255, 255, 0.7), 20vw 10vh 0 1px rgba(255, 255, 255, 0.7), 77vw 43vh 0 1px rgba(255, 255, 255, 0.7), 89vw 20vh 0 1px rgba(255, 255, 255, 0.7), 77vw 23vh 0 2px rgba(255, 255, 255, 0.7), 80vw 14vh 0 2px rgba(255, 255, 255, 0.7), 53vw 37vh 0 2px rgba(255, 255, 255, 0.7), 68vw 11vh 0 2px rgba(255, 255, 255, 0.7), 6vw 14vh 0 1px rgba(255, 255, 255, 0.7), 1vw 3vh 0 2px rgba(255, 255, 255, 0.7), 48vw 23vh 0 2px rgba(255, 255, 255, 0.7), 37vw 15vh 0 1px rgba(255, 255, 255, 0.7), 34vw 5vh 0 1px rgba(255, 255, 255, 0.7), 52vw 37vh 0 2px rgba(255, 255, 255, 0.7), 43vw 33vh 0 2px rgba(255, 255, 255, 0.7), 85vw 20vh 0 1px rgba(255, 255, 255, 0.7), 8vw 49vh 0 2px rgba(255, 255, 255, 0.7), 5vw 45vh 0 2px rgba(255, 255, 255, 0.7), 50vw 21vh 0 1px rgba(255, 255, 255, 0.7), 87vw 30vh 0 1px rgba(255, 255, 255, 0.7), 34vw 19vh 0 2px rgba(255, 255, 255, 0.7), 50vw 10vh 0 1px rgba(255, 255, 255, 0.7), 43vw 29vh 0 2px rgba(255, 255, 255, 0.7), 41vw 19vh 0 1px rgba(255, 255, 255, 0.7), 68vw 8vh 0 1px rgba(255, 255, 255, 0.7), 91vw 29vh 0 2px rgba(255, 255, 255, 0.7), 13vw 48vh 0 1px rgba(255, 255, 255, 0.7), 65vw 9vh 0 2px rgba(255, 255, 255, 0.7), 58vw 38vh 0 1px rgba(255, 255, 255, 0.7), 31vw 3vh 0 2px rgba(255, 255, 255, 0.7), 45vw 30vh 0 1px rgba(255, 255, 255, 0.7), 8vw 29vh 0 1px rgba(255, 255, 255, 0.7), 33vw 45vh 0 1px rgba(255, 255, 255, 0.7), 55vw 18vh 0 2px rgba(255, 255, 255, 0.7), 29vw 32vh 0 1px rgba(255, 255, 255, 0.7), 15vw 49vh 0 1px rgba(255, 255, 255, 0.7), 23vw 35vh 0 2px rgba(255, 255, 255, 0.7), 55vw 37vh 0 1px rgba(255, 255, 255, 0.7), 80vw 2vh 0 2px rgba(255, 255, 255, 0.7), 42vw 41vh 0 1px rgba(255, 255, 255, 0.7), 88vw 2vh 0 1px rgba(255, 255, 255, 0.7), 4vw 45vh 0 1px rgba(255, 255, 255, 0.7), 54vw 43vh 0 1px rgba(255, 255, 255, 0.7), 71vw 34vh 0 1px rgba(255, 255, 255, 0.7), 17vw 27vh 0 2px rgba(255, 255, 255, 0.7), 19vw 19vh 0 2px rgba(255, 255, 255, 0.7), 85vw 44vh 0 2px rgba(255, 255, 255, 0.7), 19vw 40vh 0 1px rgba(255, 255, 255, 0.7), 35vw 15vh 0 2px rgba(255, 255, 255, 0.7), 27vw 8vh 0 2px rgba(255, 255, 255, 0.7), 70vw 3vh 0 2px rgba(255, 255, 255, 0.7), 2vw 14vh 0 1px rgba(255, 255, 255, 0.7), 19vw 26vh 0 2px rgba(255, 255, 255, 0.7), 50vw 40vh 0 1px rgba(255, 255, 255, 0.7), 18vw 21vh 0 2px rgba(255, 255, 255, 0.7), 44vw 19vh 0 1px rgba(255, 255, 255, 0.7), 92vw 41vh 0 2px rgba(255, 255, 255, 0.7), 90vw 48vh 0 0 rgba(255, 255, 255, 0.9);
+  box-shadow:
+    045vw 16vh 0 1px rgba(255, 255, 255, 0.7),
+    72vw 27vh 0 1px rgba(255, 255, 255, 0.7),
+    82vw 15vh 0 2px rgba(255, 255, 255, 0.7),
+    69vw 23vh 0 2px rgba(255, 255, 255, 0.7),
+    16vw 33vh 0 1px rgba(255, 255, 255, 0.7),
+    42vw 17vh 0 2px rgba(255, 255, 255, 0.7),
+    10vw 25vh 0 1px rgba(255, 255, 255, 0.7),
+    81vw 41vh 0 2px rgba(255, 255, 255, 0.7),
+    15vw 13vh 0 1px rgba(255, 255, 255, 0.7),
+    82vw 14vh 0 1px rgba(255, 255, 255, 0.7),
+    35vw 23vh 0 2px rgba(255, 255, 255, 0.7),
+    5vw 13vh 0 2px rgba(255, 255, 255, 0.7),
+    74vw 2vh 0 2px rgba(255, 255, 255, 0.7),
+    22vw 50vh 0 2px rgba(255, 255, 255, 0.7),
+    24vw 2vh 0 1px rgba(255, 255, 255, 0.7),
+    43vw 34vh 0 2px rgba(255, 255, 255, 0.7),
+    33vw 39vh 0 1px rgba(255, 255, 255, 0.7),
+    43vw 43vh 0 1px rgba(255, 255, 255, 0.7),
+    45vw 11vh 0 2px rgba(255, 255, 255, 0.7),
+    34vw 30vh 0 1px rgba(255, 255, 255, 0.7),
+    14vw 15vh 0 2px rgba(255, 255, 255, 0.7),
+    87vw 24vh 0 2px rgba(255, 255, 255, 0.7),
+    53vw 40vh 0 2px rgba(255, 255, 255, 0.7),
+    64vw 22vh 0 1px rgba(255, 255, 255, 0.7),
+    24vw 21vh 0 2px rgba(255, 255, 255, 0.7),
+    78vw 11vh 0 1px rgba(255, 255, 255, 0.7),
+    53vw 44vh 0 2px rgba(255, 255, 255, 0.7),
+    98vw 22vh 0 1px rgba(255, 255, 255, 0.7),
+    58vw 46vh 0 2px rgba(255, 255, 255, 0.7),
+    77vw 47vh 0 2px rgba(255, 255, 255, 0.7),
+    62vw 5vh 0 1px rgba(255, 255, 255, 0.7),
+    60vw 7vh 0 2px rgba(255, 255, 255, 0.7),
+    24vw 7vh 0 2px rgba(255, 255, 255, 0.7),
+    38vw 6vh 0 1px rgba(255, 255, 255, 0.7),
+    80vw 41vh 0 1px rgba(255, 255, 255, 0.7),
+    55vw 50vh 0 1px rgba(255, 255, 255, 0.7),
+    9vw 49vh 0 2px rgba(255, 255, 255, 0.7),
+    18vw 11vh 0 2px rgba(255, 255, 255, 0.7),
+    72vw 40vh 0 1px rgba(255, 255, 255, 0.7),
+    91vw 46vh 0 1px rgba(255, 255, 255, 0.7),
+    1vw 11vh 0 2px rgba(255, 255, 255, 0.7),
+    1vw 30vh 0 2px rgba(255, 255, 255, 0.7),
+    21vw 41vh 0 1px rgba(255, 255, 255, 0.7),
+    56vw 1vh 0 1px rgba(255, 255, 255, 0.7),
+    20vw 10vh 0 1px rgba(255, 255, 255, 0.7),
+    77vw 43vh 0 1px rgba(255, 255, 255, 0.7),
+    89vw 20vh 0 1px rgba(255, 255, 255, 0.7),
+    77vw 23vh 0 2px rgba(255, 255, 255, 0.7),
+    80vw 14vh 0 2px rgba(255, 255, 255, 0.7),
+    53vw 37vh 0 2px rgba(255, 255, 255, 0.7),
+    68vw 11vh 0 2px rgba(255, 255, 255, 0.7),
+    6vw 14vh 0 1px rgba(255, 255, 255, 0.7),
+    1vw 3vh 0 2px rgba(255, 255, 255, 0.7),
+    48vw 23vh 0 2px rgba(255, 255, 255, 0.7),
+    37vw 15vh 0 1px rgba(255, 255, 255, 0.7),
+    34vw 5vh 0 1px rgba(255, 255, 255, 0.7),
+    52vw 37vh 0 2px rgba(255, 255, 255, 0.7),
+    43vw 33vh 0 2px rgba(255, 255, 255, 0.7),
+    85vw 20vh 0 1px rgba(255, 255, 255, 0.7),
+    8vw 49vh 0 2px rgba(255, 255, 255, 0.7),
+    5vw 45vh 0 2px rgba(255, 255, 255, 0.7),
+    50vw 21vh 0 1px rgba(255, 255, 255, 0.7),
+    87vw 30vh 0 1px rgba(255, 255, 255, 0.7),
+    34vw 19vh 0 2px rgba(255, 255, 255, 0.7),
+    50vw 10vh 0 1px rgba(255, 255, 255, 0.7),
+    43vw 29vh 0 2px rgba(255, 255, 255, 0.7),
+    41vw 19vh 0 1px rgba(255, 255, 255, 0.7),
+    68vw 8vh 0 1px rgba(255, 255, 255, 0.7),
+    91vw 29vh 0 2px rgba(255, 255, 255, 0.7),
+    13vw 48vh 0 1px rgba(255, 255, 255, 0.7),
+    65vw 9vh 0 2px rgba(255, 255, 255, 0.7),
+    58vw 38vh 0 1px rgba(255, 255, 255, 0.7),
+    31vw 3vh 0 2px rgba(255, 255, 255, 0.7),
+    45vw 30vh 0 1px rgba(255, 255, 255, 0.7),
+    8vw 29vh 0 1px rgba(255, 255, 255, 0.7),
+    33vw 45vh 0 1px rgba(255, 255, 255, 0.7),
+    55vw 18vh 0 2px rgba(255, 255, 255, 0.7),
+    29vw 32vh 0 1px rgba(255, 255, 255, 0.7),
+    15vw 49vh 0 1px rgba(255, 255, 255, 0.7),
+    23vw 35vh 0 2px rgba(255, 255, 255, 0.7),
+    55vw 37vh 0 1px rgba(255, 255, 255, 0.7),
+    80vw 2vh 0 2px rgba(255, 255, 255, 0.7),
+    42vw 41vh 0 1px rgba(255, 255, 255, 0.7),
+    88vw 2vh 0 1px rgba(255, 255, 255, 0.7),
+    4vw 45vh 0 1px rgba(255, 255, 255, 0.7),
+    54vw 43vh 0 1px rgba(255, 255, 255, 0.7),
+    71vw 34vh 0 1px rgba(255, 255, 255, 0.7),
+    17vw 27vh 0 2px rgba(255, 255, 255, 0.7),
+    19vw 19vh 0 2px rgba(255, 255, 255, 0.7),
+    85vw 44vh 0 2px rgba(255, 255, 255, 0.7),
+    19vw 40vh 0 1px rgba(255, 255, 255, 0.7),
+    35vw 15vh 0 2px rgba(255, 255, 255, 0.7),
+    27vw 8vh 0 2px rgba(255, 255, 255, 0.7),
+    70vw 3vh 0 2px rgba(255, 255, 255, 0.7),
+    2vw 14vh 0 1px rgba(255, 255, 255, 0.7),
+    19vw 26vh 0 2px rgba(255, 255, 255, 0.7),
+    50vw 40vh 0 1px rgba(255, 255, 255, 0.7),
+    18vw 21vh 0 2px rgba(255, 255, 255, 0.7),
+    44vw 19vh 0 1px rgba(255, 255, 255, 0.7),
+    92vw 41vh 0 2px rgba(255, 255, 255, 0.7),
+    90vw 48vh 0 0 rgba(255, 255, 255, 0.9);
 }
 
 /* color and position of everthing */
 body {
-  font-family: 'Oswald', serif;
+  font-family: "Oswald", serif;
   background-color: #368dda;
   user-select: none;
   -webkit-user-select: none;
@@ -168,6 +314,8 @@ body {
   position: absolute;
   top: 30%;
   width: 100%;
+  cursor: pointer;
+  z-index: 10;
 }
 
 .iam {
@@ -176,22 +324,22 @@ body {
   font-size: 9.6vw;
   line-height: 16.6vw;
   float: left;
-  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .i {
   opacity: 0;
-  color: #30ECDF;
+  color: #30ecdf;
 }
 
 .am {
   opacity: 0;
-  color: #5A8F90;
+  color: #5a8f90;
 }
 
 .menasco {
   opacity: 0;
-  color: #2FE6DD;
+  color: #2fe6dd;
   font-size: 17vw;
   line-height: 15vw;
 }
@@ -205,6 +353,7 @@ body {
   width: 100%;
   text-decoration: none;
   opacity: 0;
+  z-index: 10;
 }
 
 .link {
@@ -214,7 +363,7 @@ body {
 .link img {
   height: 96px;
   width: 150px;
-  transition: filter .25s;
+  transition: filter 0.25s;
 }
 
 .link img:hover {
@@ -223,24 +372,24 @@ body {
 
 /* animation */
 .i-animate {
-  animation: kapow .15s forwards;
+  animation: kapow 0.15s forwards;
   animation-iteration-count: 1;
   animation-delay: 1.2s;
 }
 
 .am-animate {
-  animation: kapow .15s forwards;
+  animation: kapow 0.15s forwards;
   animation-iteration-count: 1;
   animation-delay: 1.5s;
 }
 
 .menasco-animate {
-  animation: kapow .15s forwards;
+  animation: kapow 0.15s forwards;
   animation-iteration-count: 1;
   animation-delay: 2.1s;
 }
 
-@-webkit-keyframes kapow {
+@keyframes kapow {
   100% {
     opacity: 1;
   }
