@@ -1,0 +1,32 @@
+name: Validate site
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run check
+      - name: Verify the site is served
+        run: |
+          npx --no-install http-server . -p 38080 &
+          server_pid=$!
+          trap 'kill $server_pid' EXIT
+          for attempt in 1 2 3 4 5; do
+            curl --fail --silent --show-error http://127.0.0.1:38080/ | grep -F '<title>menas.co</title>' && exit 0
+            sleep 1
+          done
+          exit 1
