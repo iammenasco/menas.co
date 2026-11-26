@@ -12,21 +12,27 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [24, 26]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: npm
-      - run: npm ci --ignore-scripts
+          node-version: ${{ matrix.node-version }}
       - run: npm run check
       - name: Verify the site is served
         run: |
-          npx --no-install http-server . -p 38080 &
+          PORT=38080 node scripts/serve.mjs &
           server_pid=$!
           trap 'kill $server_pid' EXIT
           for attempt in 1 2 3 4 5; do
-            curl --fail --silent --show-error http://127.0.0.1:38080/ | grep -F '<title>menas.co</title>' && exit 0
+            if curl --fail --silent --show-error http://127.0.0.1:38080/ | grep -F '<title>menas.co</title>'; then
+              for asset in index.css index.js favicon.ico favicon-32x32.png favicon-16x16.png apple-touch-icon.png; do
+                curl --fail --silent --show-error --head "http://127.0.0.1:38080/${asset}" >/dev/null
+              done
+              exit 0
+            fi
             sleep 1
           done
           exit 1

@@ -1,9 +1,8 @@
-const iammenasco = document.querySelector('.iammenasco');
+const iammenasco = document.getElementById('iammenasco');
 const i = document.querySelector('.i');
 const am = document.querySelector('.am');
 const menasco = document.querySelector('.menasco');
 const links = document.querySelector('.links');
-
 const auroral = document.getElementById('auroral');
 
 const aurorals = [
@@ -12,11 +11,14 @@ const aurorals = [
   'northern-intense',
   'northern-dimmed',
   'northern-dusk',
-  'northern-warm'
+  'northern-warm',
 ];
 
 const randomAuroral = () => {
-  const colorScheme = aurorals[Math.floor(Math.random() * aurorals.length)];
+  const current = auroral.className.replace(/^auroral-/, '');
+  const choices = aurorals.filter((name) => name !== current);
+  const pool = choices.length > 0 ? choices : aurorals;
+  const colorScheme = pool[Math.floor(Math.random() * pool.length)];
   auroral.className = `auroral-${colorScheme}`;
 };
 
@@ -26,7 +28,7 @@ const rerunAnimation = () => {
   menasco.classList.remove('menasco-animate');
   links.classList.remove('menasco-animate');
 
-  const trick = iammenasco.offsetWidth;
+  void iammenasco.offsetWidth;
 
   i.classList.add('i-animate');
   am.classList.add('am-animate');
@@ -34,9 +36,18 @@ const rerunAnimation = () => {
   links.classList.add('menasco-animate');
 
   randomAuroral();
-
-  return trick;
 };
 
 iammenasco.addEventListener('click', rerunAnimation);
-document.addEventListener('DOMContentLoaded', randomAuroral);
+iammenasco.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    rerunAnimation();
+  }
+});
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', randomAuroral);
+} else {
+  randomAuroral();
+}

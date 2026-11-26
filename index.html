@@ -1,35 +1,43 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Brian Menasco — minimal portfolio linking to GitHub and CodePen.">
+    <meta name="theme-color" content="#368dda">
     <title>menas.co</title>
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap&text=I%20AM%20MENASCO">
     <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <meta name="msapplication-TileColor" content="#368dda" />
-    <meta name="theme-color" content="#368dda" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:700&text=I%20AM%20MENASCO">
+    <script defer src="index.js"></script>
   </head>
   <body>
-    <div id="auroral"></div>
-    <div class="auroral-stars"></div>
-    <div class="iammenasco" id="iammenasco">
-      <div class="iam">
-        <span class="i i-animate">I</span><span class="am am-animate">AM</span>
+    <div id="auroral" aria-hidden="true"></div>
+    <div class="auroral-stars" aria-hidden="true"></div>
+    <main>
+      <div class="iammenasco" id="iammenasco" role="button" tabindex="0" aria-label="I AM MENASCO — replay intro animation and switch aurora theme">
+        <div class="iam">
+          <span class="i i-animate">I</span><span class="am am-animate">AM</span>
+        </div>
+        <div class="menasco menasco-animate">MENASCO</div>
       </div>
-      <div class="menasco menasco-animate">MENASCO</div>
-    </div>
-    <div class="links menasco-animate">
-      <a href="https://github.com/iammenasco" class="link" target="_blank">
-        <img src="https://icongr.am/feather/github.svg?size=96&color=30ECDF" alt="Github">
-      </a>
-      <a href="https://codepen.io/iammenasco" class="link codepen" target="_blank">
-        <img src="https://icongr.am/fontawesome/codepen.svg?size=96&color=30ECDF" alt="Codepen">
-      </a>
-    </div>
-    <script type="text/javascript" src="index.js"></script>
+      <nav class="links menasco-animate" aria-label="External profiles">
+        <a href="https://github.com/iammenasco" class="link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+        </a>
+        <a href="https://codepen.io/iammenasco" class="link codepen" target="_blank" rel="noopener noreferrer" aria-label="CodePen profile">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M502.285 159.704l-234-156c-7.987-4.915-16.511-4.96-24.571 0l-234 156C3.714 163.703 0 170.847 0 177.989v155.999c0 7.143 3.714 14.286 9.715 18.286l234 156.022c7.987 4.915 16.511 4.96 24.571 0l234-156.022c6-3.999 9.715-11.143 9.715-18.286V177.989c-.001-7.142-3.715-14.286-9.716-18.285zM278 63.131l172.286 114.858-76.857 51.429L278 165.703V63.131zm-44 0v102.572l-95.429 63.715-76.857-51.429L234 63.131zM44 219.132l55.143 36.857L44 292.846v-73.714zm190 229.715L61.714 333.989l76.857-51.429L234 346.275v102.572zm22-140.858l-77.715-52 77.715-52 77.715 52-77.715 52zm22 140.858V346.275l95.429-63.715 76.857 51.429L278 448.847zm190-156.001l-55.143-36.857L468 219.132v73.714z"/>
+          </svg>
+        </a>
+      </nav>
+    </main>
   </body>
 </html>
