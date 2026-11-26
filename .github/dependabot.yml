@@ -1,27 +1,6 @@
-# Dependabot alerts are on in the repo settings. This file drives grouped
-# weekly version PRs so updates land cleanly against CI instead of daily PR noise.
+# Keep GitHub Actions workflows updated via weekly grouped PRs.
 version: 2
 updates:
-  - package-ecosystem: npm
-    directory: /
-    schedule:
-      interval: weekly
-      day: monday
-      time: "09:00"
-      timezone: America/Denver
-    open-pull-requests-limit: 5
-    labels:
-      - dependencies
-    commit-message:
-      prefix: deps
-    groups:
-      npm-minor-patch:
-        patterns:
-          - "*"
-        update-types:
-          - minor
-          - patch
-
   - package-ecosystem: github-actions
     directory: /
     schedule:
