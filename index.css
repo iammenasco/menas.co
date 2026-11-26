@@ -9,17 +9,15 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: "Oswald", sans-serif;
+  background-color: #368dda;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-}
-
-.container {
-  width: 100vw; /* Fallback */
-  width: 100dvw;
-  height: 100vh; /* Fallback */
-  height: 100dvh;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+  display: block;
   overflow: hidden;
-  position: relative;
 }
 
 @keyframes aura {
@@ -64,7 +62,12 @@ body {
   }
 }
 
-.auroral-agrabah {
+.auroral-agrabah,
+.auroral-northern,
+.auroral-northern-intense,
+.auroral-northern-dimmed,
+.auroral-northern-dusk,
+.auroral-northern-warm {
   position: fixed;
   left: -50%;
   top: -50%;
@@ -73,64 +76,34 @@ body {
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
-  animation-name: aura;
-  animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+
+.auroral-agrabah {
+  animation-name: aura;
+  animation-duration: 2s;
   background:
     linear-gradient(-20deg, rgba(26, 0, 192, 0.4) 40%, rgba(215, 0, 67, 0.4)),
     linear-gradient(60deg, #1a00c0 10%, #d70043);
 }
 
 .auroral-northern {
-  position: fixed;
-  left: -50%;
-  top: -50%;
-  width: 200vw;
-  height: 200vh;
-  will-change: transform;
-  transform: translateZ(0);
-  backface-visibility: hidden;
   animation-name: northern;
   animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
   background: linear-gradient(10deg, #a1d9b4 20%, #368dda 40%, #000e3c 70%);
 }
 
 .auroral-northern-intense {
-  position: fixed;
-  left: -50%;
-  top: -50%;
-  width: 200vw;
-  height: 200vh;
-  will-change: transform;
-  transform: translateZ(0);
-  backface-visibility: hidden;
   animation-name: aura;
   animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
   background: linear-gradient(10deg, #b7a841 20%, #a1006a 40%, #371d40 60%);
 }
 
 .auroral-northern-dimmed {
-  position: fixed;
-  left: -50%;
-  top: -50%;
-  width: 200vw;
-  height: 200vh;
-  will-change: transform;
-  transform: translateZ(0);
-  backface-visibility: hidden;
   animation-name: northern;
   animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
   background:
     linear-gradient(
       -45deg,
@@ -141,19 +114,8 @@ body {
 }
 
 .auroral-northern-dusk {
-  position: fixed;
-  left: -50%;
-  top: -50%;
-  width: 200vw;
-  height: 200vh;
-  will-change: transform;
-  transform: translateZ(0);
-  backface-visibility: hidden;
   animation-name: northern;
   animation-duration: 15s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
   background:
     linear-gradient(
       -35deg,
@@ -165,19 +127,8 @@ body {
 }
 
 .auroral-northern-warm {
-  position: fixed;
-  left: -50%;
-  top: -50%;
-  width: 200vw;
-  height: 200vh;
-  will-change: transform;
-  transform: translateZ(0);
-  backface-visibility: hidden;
   animation-name: aura;
   animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
   background:
     linear-gradient(5deg, transparent 70%, #da7712 95%),
     linear-gradient(160deg, #432c24 30%, #d96d7d 62%, #da7712 95%);
@@ -298,24 +249,22 @@ body {
     90vw 48vh 0 0 rgba(255, 255, 255, 0.9);
 }
 
-/* color and position of everthing */
-body {
-  font-family: "Oswald", serif;
-  background-color: #368dda;
-  user-select: none;
-  -webkit-user-select: none;
-  cursor: default;
-  display: block;
-  overflow: hidden;
-}
-
+/* hero typography and positioning */
 .iammenasco {
   margin-left: 7%;
   position: absolute;
   top: 30%;
-  width: 100%;
+  width: 86%;
+  border-radius: 12px;
   cursor: pointer;
   z-index: 10;
+}
+
+.iammenasco:focus-visible,
+.link:focus-visible {
+  outline: 3px solid #368dda;
+  outline-offset: 6px;
+  box-shadow: 0 0 0 6px #30ecdf;
 }
 
 .iam {
@@ -357,16 +306,25 @@ body {
 }
 
 .link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 96px;
+  color: #30ecdf;
+  border-radius: 12px;
   text-decoration: none;
 }
 
-.link img {
+.link svg {
+  display: block;
+  width: 96px;
   height: 96px;
-  width: 150px;
   transition: filter 0.25s;
 }
 
-.link img:hover {
+.link:hover svg,
+.link:focus-visible svg {
   filter: drop-shadow(0 0 5px white);
 }
 
@@ -392,5 +350,29 @@ body {
 @keyframes kapow {
   100% {
     opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auroral-agrabah,
+  .auroral-northern,
+  .auroral-northern-intense,
+  .auroral-northern-dimmed,
+  .auroral-northern-dusk,
+  .auroral-northern-warm {
+    animation: none;
+    transform: none;
+  }
+
+  .i,
+  .am,
+  .menasco,
+  .links {
+    animation: none;
+    opacity: 1;
+  }
+
+  .link svg {
+    transition: none;
   }
 }

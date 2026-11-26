@@ -4,13 +4,10 @@
   "description": "menas.co - Minimalist Portfolio",
   "main": "index.html",
   "scripts": {
-    "start": "http-server -p ${PORT:-3000}",
-    "check": "node --check index.js && node scripts/validate-site.mjs"
+    "start": "node scripts/serve.mjs",
+    "check": "node --check index.js && node --check scripts/serve.mjs && node --check scripts/validate-site.mjs && node scripts/validate-site.mjs"
   },
   "license": "MIT",
-  "dependencies": {
-    "http-server": "14.1.1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iammenasco/menas.co.git"
